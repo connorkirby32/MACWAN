@@ -35,7 +35,7 @@ class Sensor:
 	    self.y_pos = y;
 	    self.transmit_mac_address = 'null'
 	    self.transmit_sensor = ' '
-
+	
 	def RSSIProtocol(self, signals):
 		
 		for signal in signals:
@@ -47,9 +47,9 @@ class Sensor:
 				min =  signal_stregnth;
 				self.transmit_mac_address = signal.mac_address
 				self.transmit_sensor = signal
-
+	
 		print(str(self) + " is responding to cluster head " + str(self.transmit_mac_address) + "'s advertisement")
-
+	
 	def __str__(self):
 		return str("Sensor with MAC Address of " + str(self.mac_address + " and position of (%i, %i)" %(self.x_pos, self.y_pos)))
 
@@ -117,14 +117,14 @@ def SelfElectionImproved():
 
 
 def Advertisment():
-		print('\n'"Cluster heads are advertising"'\n')
-		#For each sensor, compare position to determine closest cluster head
-		for sensor in sensor_list:
-			#Check to make sure sensor is not dead
-			if sensor.battery_life > 0:
-				if not sensor.current_cluster_head:
-					sensor.RSSIProtocol(cluster_heads)
-		print('\n''\n')
+	print('\n'"Cluster heads are advertising"'\n')
+	#For each sensor, compare position to determine closest cluster head
+	for sensor in sensor_list:
+		#Check to make sure sensor is not dead
+		if sensor.battery_life > 0:
+			if not sensor.current_cluster_head:
+				sensor.RSSIProtocol(cluster_heads)
+	print('\n''\n')
 
 def Schedule():
 	print("Schedule Creation TDMA")
