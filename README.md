@@ -1,6 +1,6 @@
 # MACWAN
 
-##Introduction
+## Introduction
 Wireless sensor networks (WSNs) are a composition of individual sensor nodes 
 delivering information about their environment to a common base station. WSNs come 
 in a variety of sizes and functions; however, they all share the desired interest of 
@@ -10,12 +10,12 @@ distance the transmission has to travel. Unfortunately, having each node directl
 transmit to the base station could quickly deprive a sensor node of available power if it 
 is located a considerable distance away from a sensor.  
 
-##LEACH
+## LEACH
 There exists many different protocols for creating much more efficient energy 
 consumption within a network. This project specifically deals with the Low Energy 
 Adaptive Clustering Hierarchy (LEACH) protocol.​
 
-##About the Simulation​
+## About the Simulation​
 The protocol is simulated using python 
 with the matplotlib libraries. Improvements will also be made on the simulated LEACH 
 protocol to explore if beneficial optimizations are possible.  
